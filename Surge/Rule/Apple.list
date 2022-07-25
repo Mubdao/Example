@@ -1,3 +1,6 @@
+# Apple.list
+
+
 DOMAIN,api.smoot.apple.cn
 DOMAIN,apple-events.akamaized.net
 DOMAIN,apple.comscoreresearch.com
@@ -101,9 +104,3 @@ USER-AGENT,com.apple.news*
 USER-AGENT,com.apple.trustd*
 USER-AGENT,AppleTV*
 USER-AGENT,com.apple.tv*
-PROCESS-NAME,com.apple.geod
-PROCESS-NAME,storedownloadd
-PROCESS-NAME,music
-PROCESS-NAME,news
-PROCESS-NAME,lookupviewservice
-PROCESS-NAME,tv
