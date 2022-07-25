@@ -1,4 +1,4 @@
-#!name=兼容模式
+#!name=TunOnly
 #!desc=启用tun模式并强制80端口使用HTTP代理
 #!system=ios
 
