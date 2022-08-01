@@ -35,16 +35,16 @@ let args = getArgs();
   let used = info.download + info.upload;
   let total = info.total;
   let expire = args.expire || info.expire;
-  let content = [`𝗨𝗦𝗔𝗚𝗘：${bytesToSize(used)} | ${bytesToSize(total)}`];
+  let content = [`𝗨𝘀𝗮𝗴𝗲：${bytesToSize(used)} | ${bytesToSize(total)}`];
 
   if (resetDayLeft) {
-    content.push(`𝗥𝗘𝗦𝗘𝗧：
-𝗥𝗘𝗠𝗔𝗜𝗡𝗜𝗡𝗚 ${resetDayLeft}天`);
+    content.push(`𝗥𝗲𝘀𝗲𝘁：
+𝗥𝗲𝗺𝗮𝗶𝗻𝗶𝗻𝗴 ${resetDayLeft}𝗱`);
   }
   if (expire && expire !== "false") {
     if (/^[\d.]+$/.test(expire)) expire *= 1000;
     content.push(`
-𝗘𝗫𝗣𝗜𝗥𝗔𝗧𝗜𝗢𝗡：${formatTime(expire)}`);
+𝗘𝘅𝗽𝗶𝗿𝗮𝘁𝗶𝗼𝗻：${formatTime(expire)}`);
   }
 
   let now = new Date();
@@ -143,5 +143,5 @@ function formatTime(time) {
   let year = dateObj.getFullYear();
   let month = dateObj.getMonth() + 1;
   let day = dateObj.getDate();
-  return year + "年" + month + "月" + day + "日";
+  return year + "𝘆" + month + "𝗺" + day + "𝗱";
 }
