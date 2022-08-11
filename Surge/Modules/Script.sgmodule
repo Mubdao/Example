@@ -10,9 +10,6 @@ always-real-ip = %APPEND% *.msftconnecttest.com, *.msftncsi.com, *.srv.nintendo.
 
 
 [Rule]
-# Safari 
-DOMAIN,app-site-association.cdn-apple.com,REJECT
-
 # JD_ad
 URL-REGEX,^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start$,REJECT-TINYGIF
 
