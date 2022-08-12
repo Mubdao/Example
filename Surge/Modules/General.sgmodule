@@ -20,11 +20,11 @@ URL-REGEX,^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start$,REJECT-
 
 
 [URL Rewrite]
-# Redirect Google Search Service
+# > Redirect Google Search Service
 ^https?:\/\/(www.)?(g|google)\.cn https://www.google.com 302
-# Redirect Google Maps Service
+# > Redirect Google Maps Service
 ^https?:\/\/(ditu|maps).google\.cn https://maps.google.com 302
-# Redirect HTTP to HTTPS
+# > Redirect HTTP to HTTPS
 ^https?:\/\/(www.)?taobao\.com\/ https://taobao.com/ 302
 ^https?:\/\/(www.)?jd\.com\/ https://www.jd.com/ 302
 ^https?:\/\/(www.)?mi\.com\/ https://www.mi.com/ 302
