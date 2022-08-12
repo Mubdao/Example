@@ -44,7 +44,8 @@ TestFlight = type=http-request,pattern=^https?:\/\/testflight\.apple\.com\/v\d\/
 YouTubeAds = type=http-response,pattern=^https?:\/\/[\w-]+\.googlevideo\.com\/(?!(dclk_video_ads|videoplayback\?)).+&oad,script-path=https://raw.githubusercontent.com/Maasea/surgeModule/master/Script/Youtube/Youtube.js
 MeiTuanTakeoutAds = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/wmapi\.meituan\.com\/api\/v\d+\/loadInfo?,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/startup/startup.js
 JDAds = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/startup/startup.js
-
+VSCOVIP = type=http-response,pattern=^https:\/\/(api\.revenuecat\.com\/v\d\/subscribers|vsco\.co\/api\/subscriptions\/\d\.\d\/user-subscriptions)\/,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/vsco.js,script-update-interval=0
+BaimiaoVIP = type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/wubulaba/surgescript/master/Script/Baimiao.js,script-update-interval=0,pattern=^https?:\/\/baimiao\.uzero\.cn\/api\/v\d\.user\/appLaunchWithUser
 
 [MITM]
-hostname =  %INSERT% sub.store, www.zhihu.com, zhuanlan.zhihu.com, link.zhihu.com, oia.zhihu.com, *.baidu.com, photos.adobe.io, d.bilibili.com, testflight.apple.com, -redirector*.googlevideo.com,*.googlevideo.com,www.youtube.com,s.youtube.com,youtubei.googleapis.com, wmapi.meituan.com, api.m.jd.com
+hostname =  %INSERT% sub.store, www.zhihu.com, zhuanlan.zhihu.com, link.zhihu.com, oia.zhihu.com, *.baidu.com, photos.adobe.io, d.bilibili.com, testflight.apple.com, -redirector*.googlevideo.com,*.googlevideo.com,www.youtube.com,s.youtube.com,youtubei.googleapis.com, wmapi.meituan.com, api.m.jd.com，vsco.co, api.revenuecat.com，baimiao.uzero.cn
