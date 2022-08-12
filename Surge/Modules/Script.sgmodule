@@ -37,14 +37,16 @@ https://zhuanlan\.zhihu\.com/api/articles/\d+/recommendation - reject
 
 
 [Script]
-Sub-Store = type=http-request,pattern=^https?:\/\/sub\.store,script-path=https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/backend/sub-store.min.js,requires-body=true,timeout=120,max-size=131072
-ZhiHu View  = type=http-response,pattern=https://(www\.zhihu\.com/question|zhuanlan\.zhihu\.com/p)/,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/Script/zhihu.js
+SubStore = type=http-request,pattern=^https?:\/\/sub\.store,script-path=https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/backend/sub-store.min.js,requires-body=true,timeout=120,max-size=131072
+ZhiHuView  = type=http-response,pattern=https://(www\.zhihu\.com/question|zhuanlan\.zhihu\.com/p)/,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/Script/zhihu.js
 Ligthroom = type=http-response,pattern=^https:\/\/photos\.adobe\.io\/v2\/accounts*,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/lightroom.js,script-update-interval=0
 Bear = type=http-response,pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/bear.js,script-update-interval=0
 bilibili-redirect = type=http-request,pattern=^https:\/\/d\.bilibili\.com\/bi-li-bi-li-dong-hua,script-path=https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Bilibili/BilibiliRedirect.js
 TestFlight = type=http-request,pattern=^https?:\/\/testflight\.apple\.com\/v\d\/accounts\/.+?\/install$,requires-body=1,script-update-interval=-1,max-size=0,script-path=https://gist.githubusercontent.com/NobyDa/9be418b93afc5e9c8a8f4d28ae403cf2/raw/TF_Download.js
 YouTubeAds = type=http-response,pattern=^https?:\/\/[\w-]+\.googlevideo\.com\/(?!(dclk_video_ads|videoplayback\?)).+&oad,script-path=https://raw.githubusercontent.com/Maasea/surgeModule/master/Script/Youtube/Youtube.js
+MeiTuanTakeoutAds = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/wmapi\.meituan\.com\/api\/v\d+\/loadInfo?,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/startup/startup.js
+JDAds = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/startup/startup.js
 
 
 [MITM]
-hostname =  %INSERT% sub.store, www.zhihu.com, zhuanlan.zhihu.com, link.zhihu.com, oia.zhihu.com, *.baidu.com, photos.adobe.io, d.bilibili.com, testflight.apple.com, -redirector*.googlevideo.com,*.googlevideo.com,www.youtube.com,s.youtube.com,youtubei.googleapis.com
+hostname =  %INSERT% sub.store, www.zhihu.com, zhuanlan.zhihu.com, link.zhihu.com, oia.zhihu.com, *.baidu.com, photos.adobe.io, d.bilibili.com, testflight.apple.com, -redirector*.googlevideo.com,*.googlevideo.com,www.youtube.com,s.youtube.com,youtubei.googleapis.com, wmapi.meituan.com, api.m.jd.com
