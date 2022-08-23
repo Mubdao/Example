@@ -1,8 +1,9 @@
-#!name=TunOnly
+#!name=兼容模式
 #!desc=启用tun模式并强制80端口使用HTTP代理
-#!system=ios
 
 [General]
 compatibility-mode = 3
+force-http-engine-hosts = %APPEND% -<ip-address>, *
 
-force-http-engine-hosts = %APPEND% *a, *b, *c, *d, *e, *f, *g, *h, *i, *j, *k, *l, *m, *n, *o, *p, *q, *r, *s, *t, *u, *v, *w, *x, *y, *z
+[MITM]
+tcp-connection = true
