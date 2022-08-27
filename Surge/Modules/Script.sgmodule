@@ -54,4 +54,4 @@ VSCOVIP = type=http-response ^https?:\/\/api\.revenuecat\.com\/v\d\/subscribers\
 BiliBili_HD = type=http-response,pattern=https:\/\/ap(p|i)\.bilibili\.com\/((pgc\/player\/api\/playurl)|(x\/v2\/account\/myinfo\?)|(x\/v2\/account/mine\?)),requires-body=true,script-path=https://github.com/Sunert/Script/raw/master/Script/Bilibili/BiliHD.js
 
 [MITM]
-hostname =  %APPEND% sub.store, baimiao.uzero.cn, weibointl.api.weibo.cn, api.weibo.cn, www.zhihu.com, zhuanlan.zhihu.com, link.zhihu.com, oia.zhihu.com, *.baidu.com, photos.adobe.io, d.bilibili.com, testflight.apple.com, -redirector*.googlevideo.com, *.googlevideo.com, www.youtube.com, s.youtube.com, youtubei.googleapis.com, wmapi.meituan.com, api.m.jd.com，api.revenuecat.com, api.bilibili.com
+hostname =  %APPEND% sub.store, baimiao.uzero.cn, weibointl.api.weibo.cn, api.weibo.cn, www.zhihu.com, zhuanlan.zhihu.com, link.zhihu.com, oia.zhihu.com, *.baidu.com, photos.adobe.io, d.bilibili.com, testflight.apple.com, -redirector*.googlevideo.com, *.googlevideo.com, www.youtube.com, s.youtube.com, youtubei.googleapis.com, wmapi.meituan.com, api.m.jd.com，api.revenuecat.com, app.bilibili.com, api.bilibili.com
