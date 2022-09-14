@@ -2,6 +2,7 @@
 #!desc=Advanced Settings and URL Redirect
 
 
+
 [Rule]
 # > Safari 防跳转
 DOMAIN,app-site-association.cdn-apple.com,REJECT
@@ -11,6 +12,9 @@ AND,((PROTOCOL,UDP), (DEST-PORT,443)),REJECT-NO-DROP
 AND,((PROTOCOL,UDP), (DOMAIN-SUFFIX,googlevideo.com)),REJECT-NO-DROP
 # > JD_AD
 URL-REGEX,^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start$,REJECT-TINYGIF
+DOMAIN,apps.apple.com,ᴘʀᴏxɪᴇs
+DOMAIN-SUFFIX,ls.apple.com,DIRECT
+DOMAIN-SUFFIX,store.apple.com,DIRECT
 
 
 [URL Rewrite]
@@ -25,3 +29,5 @@ URL-REGEX,^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start$,REJECT-
 ^https?:\/\/you\.163\.com\/ https://you.163.com/ 302
 ^https?:\/\/(www.)?suning\.com\/ https://suning.com/ 302
 ^https?:\/\/(www.)?yhd\.com\/ https://yhd.com/ 302
+
+
