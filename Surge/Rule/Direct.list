@@ -17,6 +17,5 @@ USER-AGENT,%E6%89%8B%E6%9C%BA%E6%B7%98%E5%AE%9D*
 DOMAIN-SUFFIX,CN
 DOMAIN-KEYWORD,baidu
 # Apple
-DOMAIN,apps.apple.com,Proxy
-DOMAIN-SUFFIX,ls.apple.com,DIRECT // Apple Maps
-DOMAIN-SUFFIX,store.apple.com,DIRECT // Apple Store Online
+DOMAIN-SUFFIX,ls.apple.com
+DOMAIN-SUFFIX,store.apple.com
