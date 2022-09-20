@@ -13,6 +13,8 @@ URL-REGEX,^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v\d\/player\/ad_break
 URL-REGEX,^https?:\/\/(www|s)\.youtube\.com\/api\/stats\/ads,REJECT
 URL-REGEX,^https?:\/\/(www|s)\.youtube\.com\/(pagead|ptracking),REJECT
 URL-REGEX,^https?:\/\/s\.youtube\.com\/api\/stats\/qoe\?adcontext,REJECT
+# > weibointl
+URL-REGEX,^https://weibointl.api.weibo.cn/portal.php\?a=get_coopen_ads,REJECT-TINYGIF
 
 
 [URL Rewrite]
@@ -48,6 +50,7 @@ VSCOVIP = type=http-response ^https?:\/\/api\.revenuecat\.com\/v\d\/subscribers\
 bilibili-redirect = type=http-request,pattern=^https:\/\/d\.bilibili\.com\/bi-li-bi-li-dong-hua,script-path=https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Bilibili/bilibili_redirect.js
 BiliBili_HD = type=http-response,pattern=https:\/\/ap(p|i)\.bilibili\.com\/((pgc\/player\/api\/playurl)|(x\/v2\/account\/myinfo\?)|(x\/v2\/account/mine\?)),requires-body=true,script-path=https://github.com/Sunert/Script/raw/master/Script/Bilibili/BiliHD.js
 ColorWeather = type=http-response,requires-body=1,max-size=0,pattern=https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user),script-path=https://raw.githubusercontent.com/githubdulong/Script/master/cytq.js
+weibointl = type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mubdao/Self-use/main/Surge/WeiboInt.js,script-update-interval=0,pattern=^https?:\/\/api\.weibo\.cn\/2\/(statuses|groups)\/(unread_hot_|friends_)?timeline
 
 [MITM]
-hostname =  %APPEND% sub.store, baimiao.uzero.cn, www.zhihu.com, zhuanlan.zhihu.com, link.zhihu.com, oia.zhihu.com, *.baidu.com, photos.adobe.io, testflight.apple.com, -redirector*.googlevideo.com, *.googlevideo.com, www.youtube.com, s.youtube.com, youtubei.googleapis.com, api.m.jd.com，api.revenuecat.com, d.bilibili.com, app.bilibili.com, api.bilibili.com, biz.caiyunapp.com
+hostname =  %APPEND% sub.store, baimiao.uzero.cn, www.zhihu.com, zhuanlan.zhihu.com, link.zhihu.com, oia.zhihu.com, *.baidu.com, photos.adobe.io, testflight.apple.com, -redirector*.googlevideo.com, *.googlevideo.com, www.youtube.com, s.youtube.com, youtubei.googleapis.com, api.m.jd.com，api.revenuecat.com, d.bilibili.com, app.bilibili.com, api.bilibili.com, biz.caiyunapp.com, weibointl.api.weibo.cn, api.weibo.cn
