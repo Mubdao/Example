@@ -16,27 +16,12 @@ URL-REGEX,^https?:\/\/s\.youtube\.com\/api\/stats\/qoe\?adcontext,REJECT
 # > weibointl
 URL-REGEX,^https://weibointl.api.weibo.cn/portal.php\?a=get_coopen_ads,REJECT-TINYGIF
 
-
 [URL Rewrite]
-# > ZhiHu Web Ad Removal
-https://www\.zhihu\.com/api/v4/questions/\d+/related-readings - reject
-https://www\.zhihu\.com/api/v4/answers/\d+/related-readings - reject
-https://www\.zhihu\.com/api/v4/hot_recommendation - reject
-https://www\.zhihu\.com/commercial_api/banners_v3/mobile_banner - reject
-https://zhuanlan\.zhihu\.com/api/articles/\d+/recommendation - reject
-^https?://link\.zhihu\.com/\?target=https?%3A//(.*) https://$1 302
-^https?://oia\.zhihu\.com https://zhuanlan.zhihu.com 302
 # > Block YouTube Advertising
 (https?:\/\/[\w-]+.googlevideo.com\/.+?)(&ctier=L|\/ctier\/L)((&|\/).+?)(,ctier|%2Cctier)((,|%2C).+) $1$3$6
+
 [Map Local]
 ^https?:\/\/[\w-]+\.googlevideo\.com\/(?!(dclk_video_ads|videoplayback\?)).+&oad data="https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/tinygif.gif"
-
-[Header Rewrite]
-# > ZhiHu Rewrite
-"^https:\/\/www\.zhihu\.com\/ " header-replace User-Agent "Mozilla/5.0 (iPhone; CPU iPhone OS 14_0 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 Quark/604.1 T7/10.7 SearchCraft/2.7.7 (Baidu; P1 9.0.0)"
-# > baidu Rewrite
-^https?:\/\/.*\.baidu\.com header-replace User-Agent "Mozilla/5.0 (iPhone; CPU iPhone OS 13_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.1 Mobile/15E148 Safari/16C50 Quark/604.1 T7/10.3 SearchCraft/2.6.3 (Baidu; P1 8.0.0)"
-
 
 [Script]
 SubStore = type=http-request,pattern=^https?:\/\/sub\.store,script-path=https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/backend/sub-store.min.js,requires-body=true,timeout=120,max-size=131072
@@ -47,10 +32,9 @@ TestFlight = type=http-request,pattern=^https?:\/\/testflight\.apple\.com\/v\d\/
 JDAds = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/startup/startup.js
 VSCOVIP = type=http-request ^https?:\/\/api\.revenuecat\.com\/v\d\/subscribers\/ script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/vsco.js
 VSCOVIP = type=http-response ^https?:\/\/api\.revenuecat\.com\/v\d\/subscribers\/ requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/vsco.js
-bilibili-redirect = type=http-request,pattern=^https:\/\/d\.bilibili\.com\/bi-li-bi-li-dong-hua,script-path=https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Bilibili/bilibili_redirect.js
 BiliBili_HD = type=http-response,pattern=https:\/\/ap(p|i)\.bilibili\.com\/((pgc\/player\/api\/playurl)|(x\/v2\/account\/myinfo\?)|(x\/v2\/account/mine\?)),requires-body=true,script-path=https://github.com/Sunert/Script/raw/master/Script/Bilibili/BiliHD.js
 ColorWeather = type=http-response,requires-body=1,max-size=0,pattern=https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user),script-path=https://raw.githubusercontent.com/githubdulong/Script/master/cytq.js
 weibointl = type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mubdao/Self-use/main/Surge/WeiboInt.js,script-update-interval=0,pattern=^https?:\/\/api\.weibo\.cn\/2\/(statuses|groups)\/(unread_hot_|friends_)?timeline
 
 [MITM]
-hostname =  %APPEND% sub.store, baimiao.uzero.cn, www.zhihu.com, zhuanlan.zhihu.com, link.zhihu.com, oia.zhihu.com, *.baidu.com, photos.adobe.io, testflight.apple.com, -redirector*.googlevideo.com, *.googlevideo.com, www.youtube.com, s.youtube.com, youtubei.googleapis.com, api.m.jd.com，api.revenuecat.com, d.bilibili.com, app.bilibili.com, api.bilibili.com, biz.caiyunapp.com, weibointl.api.weibo.cn, api.weibo.cn
+hostname =  %APPEND% sub.store, baimiao.uzero.cn, photos.adobe.io, testflight.apple.com, -redirector*.googlevideo.com, *.googlevideo.com, www.youtube.com, s.youtube.com, youtubei.googleapis.com, api.revenuecat.com, d.bilibili.com, app.bilibili.com, api.bilibili.com, biz.caiyunapp.com, weibointl.api.weibo.cn, api.weibo.cn
