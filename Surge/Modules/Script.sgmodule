@@ -34,7 +34,6 @@ VSCOVIP = type=http-request ^https?:\/\/api\.revenuecat\.com\/v\d\/subscribers\/
 VSCOVIP = type=http-response ^https?:\/\/api\.revenuecat\.com\/v\d\/subscribers\/ requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/vsco.js
 BiliBili_HD = type=http-response,pattern=https:\/\/ap(p|i)\.bilibili\.com\/((pgc\/player\/api\/playurl)|(x\/v2\/account\/myinfo\?)|(x\/v2\/account/mine\?)),requires-body=true,script-path=https://github.com/Sunert/Script/raw/master/Script/Bilibili/BiliHD.js
 ColorWeather = type=http-response,requires-body=1,max-size=0,pattern=https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user),script-path=https://raw.githubusercontent.com/githubdulong/Script/master/cytq.js
-#weibointl = type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mubdao/Self-use/main/Surge/WeiboInt.js,script-update-interval=0,pattern=^https?:\/\/api\.weibo\.cn\/2\/(statuses|groups)\/(unread_hot_|friends_)?timeline
 
 [MITM]
 hostname =  %APPEND% sub.store, baimiao.uzero.cn, photos.adobe.io, testflight.apple.com, -redirector*.googlevideo.com, *.googlevideo.com, www.youtube.com, s.youtube.com, youtubei.googleapis.com, api.revenuecat.com, d.bilibili.com, app.bilibili.com, api.bilibili.com, biz.caiyunapp.com, weibointl.api.weibo.cn, api.weibo.cn
