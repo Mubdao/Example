@@ -20,6 +20,7 @@ Ligthroom = type=http-response,pattern=^https:\/\/photos\.adobe\.io\/v2\/account
 TestFlight = type=http-request,pattern=^https?:\/\/testflight\.apple\.com\/v\d\/accounts\/.+?\/install$,requires-body=1,script-update-interval=-1,max-size=0,script-path=https://gist.githubusercontent.com/NobyDa/9be418b93afc5e9c8a8f4d28ae403cf2/raw/TF_Download.js
 BiliBili_HD = type=http-response,pattern=https:\/\/ap(p|i)\.bilibili\.com\/((pgc\/player\/api\/playurl)|(x\/v2\/account\/myinfo\?)|(x\/v2\/account/mine\?)),requires-body=true,script-path=https://github.com/Sunert/Script/raw/master/Script/Bilibili/BiliHD.js
 ColorWeather = type=http-response,requires-body=1,max-size=0,pattern=https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user),script-path=https://raw.githubusercontent.com/githubdulong/Script/master/cytq.js
+VSCO = type= http-response,pattern="^https:\/\/(api\.revenuecat\.com\/v\d\/subscribers|vsco\.co\/api\/subscriptions\/\d\.\d\/user-subscriptions)\/",requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mubdao/Self-use/main/Surge/vsco.js,script-update-interval=0
 
 [MITM]
-hostname =  %APPEND% baimiao.uzero.cn, photos.adobe.io, testflight.apple.com, api.revenuecat.com, d.bilibili.com, app.bilibili.com, api.bilibili.com, biz.caiyunapp.com, *.googlevideo.com, youtubei.googleapis.com
+hostname =  %APPEND% baimiao.uzero.cn, photos.adobe.io, testflight.apple.com, api.revenuecat.com, d.bilibili.com, app.bilibili.com, api.bilibili.com, biz.caiyunapp.com, *.googlevideo.com, youtubei.googleapis.com, api.revenuecat.com
