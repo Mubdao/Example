@@ -13,6 +13,9 @@ URL-REGEX,^https://weibointl.api.weibo.cn/portal.php\?a=get_coopen_ads,REJECT-TI
 
 
 [Script]
+Sub-Store Core = type=http-request,pattern=^https?:\/\/sub\.store\/((download)|api\/(preview|sync|(utils\/node-info))),script-path=https://github.com/sub-store-org/Sub-Store/releases/latest/download/sub-store-1.min.js,requires-body=true,timeout=120,ability=http-client-policy
+Sub-Store Simple = type=http-request,pattern=^https?:\/\/sub\.store,script-path=https://github.com/sub-store-org/Sub-Store/releases/latest/download/sub-store-0.min.js,requires-body=true
+Sub-Store Sync= type=cron,cronexp=0 0 * * *,wake-system=1,timeout=120,script-path=https://github.com/sub-store-org/Sub-Store/releases/latest/download/cron-sync-artifacts.min.js
 youtube-proto = type=http-response,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence),requires-body=1,binary-body-mode=1,max-size=3145728,script-path=https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.js
 youtube-fake = type=http-response,pattern=^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad,requires-body=0,script-path=https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube-fake.js
 Baimiao.js = type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lcmigg/Surge/master/Script/Baimiao.js,script-update-interval=0,pattern=^https?:\/\/baimiao\.uzero\.cn\/api\/v\d\.user\/appLaunchWithUser
@@ -24,4 +27,4 @@ VSCO = type= http-response,pattern="^https:\/\/(api\.revenuecat\.com\/v\d\/subsc
 Aliyundrive = type=http-response,pattern=^https?:\/\/api\.aliyundrive\.com\/apps\/v\d\/users\/apps\/widgets$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/alidrive.js
 
 [MITM]
-hostname =  %APPEND% baimiao.uzero.cn, photos.adobe.io, testflight.apple.com, api.revenuecat.com, d.bilibili.com, app.bilibili.com, api.bilibili.com, biz.caiyunapp.com, *.googlevideo.com, youtubei.googleapis.com, api.revenuecat.com, api.aliyundrive.com
+hostname =  %APPEND% sub.store, baimiao.uzero.cn, photos.adobe.io, testflight.apple.com, api.revenuecat.com, d.bilibili.com, app.bilibili.com, api.bilibili.com, biz.caiyunapp.com, *.googlevideo.com, youtubei.googleapis.com, api.revenuecat.com, api.aliyundrive.com
