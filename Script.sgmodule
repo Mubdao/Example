@@ -21,5 +21,6 @@ BiliBili_HD = type=http-response,pattern=https:\/\/ap(p|i)\.bilibili\.com\/((pgc
 ColorWeather = type=http-response,pattern=https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user),script-path=https://raw.githubusercontent.com/githubdulong/Script/master/cytq.js,requires-body=1,max-size=0
 VSCO = type= http-response,pattern="^https:\/\/(api\.revenuecat\.com\/v\d\/subscribers|vsco\.co\/api\/subscriptions\/\d\.\d\/user-subscriptions)\/",script-path=https://raw.githubusercontent.com/Mubdao/Example/main/vsco.js,script-update-interval=0,requires-body=1,max-size=0,
 WeChat = type=http-response,pattern=^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/Wechat.js,requires-body=1,max-size=0
+
 [MITM]
 hostname =  %APPEND% sub.store, baimiao.uzero.cn, photos.adobe.io, testflight.apple.com, api.revenuecat.com, d.bilibili.com, app.bilibili.com, api.bilibili.com, biz.caiyunapp.com, *.googlevideo.com, youtubei.googleapis.com, mp.weixin.qq.com
