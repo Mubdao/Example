@@ -1,5 +1,5 @@
 /*
-^https:\/\/photos\.adobe\.io\/v2\/accounts* url script-response-body https://raw.githubusercontent.com/ackakakaka/QuantumultX/master/lightroom.js
+^https:\/\/photos\.adobe\.io\/v2\/accounts* url script-response-body https://raw.githubusercontent.com/Mubdao/Example/main/lightroom.js
 
 MITM:photos.adobe.io
 
