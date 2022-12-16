@@ -2,10 +2,6 @@
 #!desc=URL 重定向
 
 
-[Rule]
-# 屏蔽HTTP3/QUIC协议
-AND,((PROTOCOL,UDP), (DEST-PORT,443)),REJECT-NO-DROP
-
 [URL Rewrite]
 # Redirect Google Search Service
 ^https?:\/\/(www.)?(g|google)\.cn https://www.google.com 302
