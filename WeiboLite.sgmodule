@@ -3,6 +3,9 @@
 # @ddgksf2013（Cuttlefish）https://github.com/ddgksf2013
 
 
+[Rule]
+DOMAIN,sdkapp.uve.weibo.com,DIRECT
+
 [URL Rewrite]
 # Hot_search
 ^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php\?a=hot_search_users - reject
